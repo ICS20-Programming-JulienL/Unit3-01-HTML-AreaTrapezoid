@@ -7,20 +7,18 @@
 "use strict";
 
 function enterClicked() {
-  // get the user work hours
-  let aBase= parseFloat(document.getElementById("prism-base-a").value)
+  // The first base
+  let aBase= parseFloat(document.getElementById("base-a").value)
 
-	// get the hourly pay from the user
-  let height= parseFloat(document.getElementById("prism-height").value)
+    // Get the second base
+  let bBase= parseFloat(document.getElementById("base-b").value)
+  
+	// Get the height
+  let height= parseFloat(document.getElementById("height").value)
 
-  // get the hourly pay from the user
-  let bBase= parseFloat(document.getElementById("prism-base-b").value)
 
-
-  //calculate the pay  
-  let abBase = aBase+bBase;
-  //calculate the taxes
-  let area =  abBase*0.5*height
+  //calculate the area
+  let area =  (aBase+bBase)/2*height
 
 
   // display the user's pay
